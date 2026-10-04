@@ -1,0 +1,179 @@
+{
+  "entities": {
+    "vLLM": "Tool",
+    "TensorRT-LLM": "Tool",
+    "throughput": "Concept",
+    "latency": "Concept",
+    "Llama-3 70B": "Model",
+    "PagedAttention": "Concept",
+    "quantization": "Concept",
+    "AWQ": "Concept",
+    "GPTQ": "Concept",
+    "KV cache": "Concept",
+    "OOM": "Problem",
+    "Out Of Memory": "Problem",
+    "TGI": "Tool",
+    "HuggingFace TGI": "Tool",
+    "continuous batching": "Concept",
+    "concurrent requests": "Concept",
+    "batch size": "Concept",
+    "crashing": "Problem"
+  },
+  "relationships": [
+    {
+      "source": "vLLM",
+      "target": "throughput",
+      "relation": "ASSOCIATED_WITH"
+    },
+    {
+      "source": "vLLM",
+      "target": "latency",
+      "relation": "ASSOCIATED_WITH"
+    },
+    {
+      "source": "TensorRT-LLM",
+      "target": "throughput",
+      "relation": "ASSOCIATED_WITH"
+    },
+    {
+      "source": "TensorRT-LLM",
+      "target": "latency",
+      "relation": "ASSOCIATED_WITH"
+    },
+    {
+      "source": "vLLM",
+      "target": "PagedAttention",
+      "relation": "ASSOCIATED_WITH"
+    },
+    {
+      "source": "TensorRT-LLM",
+      "target": "PagedAttention",
+      "relation": "ASSOCIATED_WITH"
+    },
+    {
+      "source": "vLLM",
+      "target": "quantization",
+      "relation": "ASSOCIATED_WITH"
+    },
+    {
+      "source": "vLLM",
+      "target": "AWQ",
+      "relation": "ASSOCIATED_WITH"
+    },
+    {
+      "source": "vLLM",
+      "target": "GPTQ",
+      "relation": "ASSOCIATED_WITH"
+    },
+    {
+      "source": "OOM",
+      "target": "quantization",
+      "relation": "RELATED_TO_CONCEPT"
+    },
+    {
+      "source": "OOM",
+      "target": "KV cache",
+      "relation": "RELATED_TO_CONCEPT"
+    },
+    {
+      "source": "Out Of Memory",
+      "target": "quantization",
+      "relation": "RELATED_TO_CONCEPT"
+    },
+    {
+      "source": "Out Of Memory",
+      "target": "KV cache",
+      "relation": "RELATED_TO_CONCEPT"
+    },
+    {
+      "source": "vLLM",
+      "target": "continuous batching",
+      "relation": "ASSOCIATED_WITH"
+    },
+    {
+      "source": "vLLM",
+      "target": "concurrent requests",
+      "relation": "ASSOCIATED_WITH"
+    },
+    {
+      "source": "TGI",
+      "target": "continuous batching",
+      "relation": "ASSOCIATED_WITH"
+    },
+    {
+      "source": "TGI",
+      "target": "concurrent requests",
+      "relation": "ASSOCIATED_WITH"
+    },
+    {
+      "source": "HuggingFace TGI",
+      "target": "continuous batching",
+      "relation": "ASSOCIATED_WITH"
+    },
+    {
+      "source": "HuggingFace TGI",
+      "target": "concurrent requests",
+      "relation": "ASSOCIATED_WITH"
+    },
+    {
+      "source": "vLLM",
+      "target": "OOM",
+      "relation": "MIGHT_SOLVE"
+    },
+    {
+      "source": "vLLM",
+      "target": "crashing",
+      "relation": "MIGHT_SOLVE"
+    },
+    {
+      "source": "TGI",
+      "target": "OOM",
+      "relation": "MIGHT_SOLVE"
+    },
+    {
+      "source": "TGI",
+      "target": "crashing",
+      "relation": "MIGHT_SOLVE"
+    },
+    {
+      "source": "vLLM",
+      "target": "batch size",
+      "relation": "ASSOCIATED_WITH"
+    },
+    {
+      "source": "TGI",
+      "target": "batch size",
+      "relation": "ASSOCIATED_WITH"
+    },
+    {
+      "source": "OOM",
+      "target": "batch size",
+      "relation": "RELATED_TO_CONCEPT"
+    },
+    {
+      "source": "crashing",
+      "target": "batch size",
+      "relation": "RELATED_TO_CONCEPT"
+    }
+  ],
+  "mentions_count": {
+    "vLLM": 7,
+    "TensorRT-LLM": 2,
+    "throughput": 2,
+    "latency": 2,
+    "Llama-3 70B": 1,
+    "PagedAttention": 1,
+    "quantization": 2,
+    "AWQ": 1,
+    "GPTQ": 1,
+    "KV cache": 1,
+    "OOM": 2,
+    "Out Of Memory": 1,
+    "TGI": 4,
+    "HuggingFace TGI": 1,
+    "continuous batching": 2,
+    "concurrent requests": 1,
+    "batch size": 1,
+    "crashing": 1
+  }
+}

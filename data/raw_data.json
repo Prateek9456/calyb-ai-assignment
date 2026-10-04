@@ -1,0 +1,21 @@
+[
+  {
+    "id": "t1",
+    "title": "Best way to deploy LLMs in production?",
+    "body": "We are looking to deploy a Llama-3 70B model. What is the standard stack? We care about high throughput and low latency. Is vLLM still the best choice or should we look at TensorRT-LLM?",
+    "comments": [
+      "vLLM is great for high throughput because of PagedAttention, but if you want the absolute lowest latency on Nvidia hardware, TensorRT-LLM is usually better, though harder to set up.",
+      "Don't forget about quantization. Using AWQ or GPTQ with vLLM gives a good balance.",
+      "If you're getting OOM (Out Of Memory) errors, try reducing the KV cache size or using quantization."
+    ]
+  },
+  {
+    "id": "t2",
+    "title": "vLLM vs TGI for deployment",
+    "body": "Has anyone compared vLLM and HuggingFace TGI? We need something that supports continuous batching and handles concurrent requests well.",
+    "comments": [
+      "Both support continuous batching. vLLM has historically been faster for us, but TGI has better support for some specialized models.",
+      "We hit an OOM issue with TGI when the batch size spiked. vLLM handled the same load without crashing."
+    ]
+  }
+]
